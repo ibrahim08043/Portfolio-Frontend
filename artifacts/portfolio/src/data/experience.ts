@@ -13,7 +13,7 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    role: "MERN Stack Developer",
+    role: "Full-Stack Developer",
     company: "Saasify Labs",
     location: "Remote",
     period: "Sep 2025 – Present",
@@ -36,7 +36,7 @@ export const experiences: Experience[] = [
     location: "Karachi",
     period: "Mar 2024 – Aug 2025",
     description:
-      "Architected and launched the TGI Health Dashboard, a multi-role healthcare platform integrating 30+ live REST APIs, and drove major performance and architecture improvements across 19+ dashboard pages.",
+      "Architected and launched a multi-role enterprise healthcare platform integrating 30+ live REST APIs, and drove major performance and architecture improvements across 19+ dashboard pages.",
     bullets: [
       "Integrated 30+ REST APIs and removed 100% of hardcoded data, improving data consistency and lowering support inquiries by 35%.",
       "Developed a unified design system with Recharts and Ant Design, standardizing UI patterns across 19+ pages.",

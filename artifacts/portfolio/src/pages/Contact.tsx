@@ -12,7 +12,7 @@ const Contact = () => {
       variants={pageVariants}
     >
       <Helmet>
-        <title>Contact - Muhammad Ibrahim | MERN Stack Developer</title>
+        <title>Contact - Muhammad Ibrahim | Full-Stack Developer</title>
         <meta name="description" content="Get in touch with Muhammad Ibrahim for web development projects, collaborations, or job opportunities. Contact form and details available." />
       </Helmet>
       

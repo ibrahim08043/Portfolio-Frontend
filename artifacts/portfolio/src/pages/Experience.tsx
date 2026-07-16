@@ -12,8 +12,8 @@ const Experience = () => {
       variants={pageVariants}
     >
       <Helmet>
-        <title>Experience - Muhammad Ibrahim | MERN Stack Developer</title>
-        <meta name="description" content="Learn about Muhammad Ibrahim's professional experience and career journey as a MERN Stack Front-End Developer." />
+        <title>Experience - Muhammad Ibrahim | Full-Stack Developer</title>
+        <meta name="description" content="Learn about Muhammad Ibrahim's professional experience and career journey as a Full-Stack Developer with 3+ years of production experience." />
       </Helmet>
       
       <main className="pt-20">

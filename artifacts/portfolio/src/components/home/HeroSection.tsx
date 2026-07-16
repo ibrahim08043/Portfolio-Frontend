@@ -1,132 +1,125 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import ParticlesBg from "@/components/shared/ParticlesBg";
 import { fadeIn } from "@/lib/framer-animations";
 import useTyped from "@/hooks/use-typed";
 
 const stats = [
-  { value: "2+",  label: "Years Experience" },
-  { value: "50+", label: "APIs Integrated" },
-  { value: "40+", label: "REST Endpoints Built" },
-  { value: "3+",  label: "Junior Devs Mentored" },
+  { value: "3+",  label: "Years Experience" },
+  { value: "50+", label: "APIs Integrated"  },
+  { value: "40+", label: "Endpoints Built"  },
+  { value: "3+",  label: "Devs Mentored"   },
 ];
 
 const socialLinks = [
-  { href: "https://github.com/ibrahim08043",                        icon: "fab fa-github",   label: "GitHub" },
-  { href: "https://linkedin.com/in/muhammadibrahim-7b3220367",     icon: "fab fa-linkedin", label: "LinkedIn" },
-  { href: "https://x.com/Ibrahim93045",                            icon: "fab fa-twitter",  label: "Twitter" },
-  { href: "https://leetcode.com/u/MuhammadIbrahim792/",            icon: "fas fa-code",     label: "LeetCode" },
+  { href: "https://github.com/ibrahim08043",                    icon: "fab fa-github",   label: "GitHub"   },
+  { href: "https://linkedin.com/in/muhammadibrahim-7b3220367", icon: "fab fa-linkedin", label: "LinkedIn" },
+  { href: "https://x.com/Ibrahim93045",                        icon: "fab fa-twitter",  label: "Twitter"  },
+  { href: "https://leetcode.com/u/MuhammadIbrahim792/",        icon: "fas fa-code",     label: "LeetCode" },
 ];
 
 const HeroSection = () => {
-  const typingRef = useRef<HTMLDivElement>(null);
-  useTyped(typingRef, [
-    "Full-Stack Developer (MERN)",
-    "React.js & Next.js Engineer",
-    "Node.js & NestJS Developer",
-    "AI-Augmented Engineer",
+  const typingRef = useRef<HTMLSpanElement>(null);
+  useTyped(typingRef as any, [
+    "Full-Stack Developer",
+    "React & Node.js Engineer",
+    "API Architect",
+    "AI-Augmented Developer",
   ]);
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center overflow-hidden bg-dot-grid"
     >
-      <ParticlesBg />
+      {/* Subtle vignette at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#090909] to-transparent pointer-events-none z-10" />
 
-      {/* Background radial glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full
-                        bg-[#38BDF8]/[0.04] blur-[100px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full
-                        bg-[#F59E0B]/[0.03] blur-[100px]" />
-      </div>
-
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="container mx-auto px-5 md:px-10 relative z-20 pt-24 pb-16">
         <motion.div
           className="max-w-3xl"
           initial="hidden"
           animate="visible"
-          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.08 } } }}
         >
           {/* Status badge */}
-          <motion.div variants={fadeIn("up", 0.05)} className="mb-6">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold
-                             bg-[#38BDF8]/8 text-[#38BDF8] border border-[#38BDF8]/20">
+          <motion.div variants={fadeIn("up", 0)} className="mb-8">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm text-xs font-mono font-medium
+                             bg-[#B5FF4D]/8 text-[#B5FF4D] border border-[#B5FF4D]/20">
               <span className="w-1.5 h-1.5 rounded-full bg-[#4ADE80] animate-pulse" />
-              Available for new opportunities
+              Open to new opportunities
             </span>
           </motion.div>
 
           {/* Greeting */}
           <motion.p
-            className="text-[#94A3B8] text-lg font-medium mb-2"
-            variants={fadeIn("up", 0.1)}
+            className="font-mono text-sm text-[#555] tracking-widest uppercase mb-3"
+            variants={fadeIn("up", 0.05)}
           >
             Hello, I'm
           </motion.p>
 
           {/* Name */}
           <motion.h1
-            className="font-heading font-extrabold text-5xl md:text-7xl text-white leading-tight mb-4"
-            variants={fadeIn("up", 0.18)}
+            className="font-display font-extrabold text-6xl md:text-8xl text-white leading-none tracking-tight mb-5"
+            variants={fadeIn("up", 0.1)}
           >
-            Muhammad{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #38BDF8 0%, #F59E0B 100%)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              Ibrahim
-            </span>
+            Muhammad
+            <br />
+            <span className="text-gradient-lime">Ibrahim</span>
           </motion.h1>
 
           {/* Typed role */}
           <motion.div
-            className="text-xl md:text-2xl font-mono text-[#E2E8F0] mb-6 h-8"
-            variants={fadeIn("up", 0.25)}
-            ref={typingRef}
-          />
-
-          {/* Bio from CV */}
-          <motion.p
-            className="text-[#94A3B8] text-lg leading-relaxed max-w-2xl mb-10"
-            variants={fadeIn("up", 0.32)}
+            className="flex items-center gap-2 mb-8 h-8"
+            variants={fadeIn("up", 0.15)}
           >
-            Full-Stack Developer with <span className="text-[#E2E8F0] font-medium">2+ years</span> of
-            production experience in React/Next.js and Node.js — architecting scalable web applications
-            for <span className="text-[#E2E8F0] font-medium">healthcare and travel platforms</span>,
-            integrating 50+ REST APIs, and shipping real-time features with WebSockets.
+            <span className="text-[#444] font-mono text-sm">&gt;</span>
+            <span
+              ref={typingRef}
+              className="font-mono text-base md:text-lg text-[#B5FF4D]"
+            />
+            <span className="w-0.5 h-5 bg-[#B5FF4D] animate-blink" />
+          </motion.div>
+
+          {/* Bio */}
+          <motion.p
+            className="text-[#777] text-lg leading-relaxed max-w-2xl mb-10"
+            variants={fadeIn("up", 0.2)}
+          >
+            Full-Stack Developer with <span className="text-[#EFEFEF]">3+ years</span> of production
+            experience architecting scalable web applications, integrating complex APIs, and building
+            real-time systems. I combine modern frameworks with{" "}
+            <span className="text-[#EFEFEF]">AI-powered tools</span> to deliver solutions that
+            perform at scale.
           </motion.p>
 
           {/* CTAs */}
-          <motion.div className="flex flex-wrap gap-4 mb-12" variants={fadeIn("up", 0.38)}>
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+          <motion.div
+            className="flex flex-wrap gap-4 mb-14"
+            variants={fadeIn("up", 0.25)}
+          >
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm
-                           bg-[#38BDF8] text-[#070B0F] hover:bg-[#7DD3FC]
-                           shadow-[0_0_20px_rgba(56,189,248,0.25)] hover:shadow-[0_0_30px_rgba(56,189,248,0.35)]
-                           transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded text-sm font-display font-bold
+                           bg-[#B5FF4D] text-[#090909] hover:bg-[#CAFF6B]
+                           transition-all duration-200"
               >
-                View Projects
+                View My Work
                 <i className="fas fa-arrow-right text-xs"></i>
               </Link>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm
-                           border border-[#38BDF8]/30 text-[#38BDF8]
-                           hover:bg-[#38BDF8]/8 hover:border-[#38BDF8]/50
-                           transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded text-sm font-medium
+                           border border-[#2C2C2C] text-[#EFEFEF]
+                           hover:border-[#B5FF4D]/40 hover:text-[#B5FF4D]
+                           transition-all duration-200"
               >
-                Contact Me
+                Let's Talk
                 <i className="fas fa-paper-plane text-xs"></i>
               </Link>
             </motion.div>
@@ -134,28 +127,24 @@ const HeroSection = () => {
 
           {/* Stats */}
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12 pb-12 border-b border-white/[0.06]"
-            variants={fadeIn("up", 0.44)}
+            className="grid grid-cols-2 sm:grid-cols-4 gap-6 pb-10 mb-10 border-b border-[#2C2C2C]"
+            variants={fadeIn("up", 0.3)}
           >
             {stats.map((stat, i) => (
-              <div key={i} className="text-center sm:text-left">
-                <div className="font-heading font-extrabold text-3xl md:text-4xl"
-                  style={{
-                    background: "linear-gradient(135deg, #38BDF8 0%, #F59E0B 100%)",
-                    WebkitBackgroundClip: "text",
-                    backgroundClip: "text",
-                    color: "transparent",
-                  }}
-                >
+              <div key={i}>
+                <div className="font-display font-extrabold text-3xl text-[#B5FF4D]">
                   {stat.value}
                 </div>
-                <div className="text-xs text-[#94A3B8] mt-1 font-medium">{stat.label}</div>
+                <div className="text-xs text-[#555] mt-1 font-mono">{stat.label}</div>
               </div>
             ))}
           </motion.div>
 
-          {/* Social links */}
-          <motion.div className="flex items-center gap-3" variants={fadeIn("up", 0.5)}>
+          {/* Social */}
+          <motion.div
+            className="flex items-center gap-3"
+            variants={fadeIn("up", 0.35)}
+          >
             {socialLinks.map((s) => (
               <motion.a
                 key={s.href}
@@ -164,15 +153,14 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 aria-label={s.label}
                 whileHover={{ y: -3 }}
-                className="w-10 h-10 rounded-xl flex items-center justify-center
-                           bg-white/5 border border-white/[0.06] text-[#94A3B8]
-                           hover:text-[#38BDF8] hover:bg-[#38BDF8]/8 hover:border-[#38BDF8]/20
-                           transition-all duration-200"
+                className="w-9 h-9 rounded border border-[#2C2C2C] flex items-center justify-center
+                           text-[#555] hover:text-[#B5FF4D] hover:border-[#B5FF4D]/30
+                           transition-all duration-200 text-sm"
               >
-                <i className={`${s.icon} text-sm`}></i>
+                <i className={s.icon}></i>
               </motion.a>
             ))}
-            <span className="text-[#475569] text-xs ml-2 font-mono">
+            <span className="text-[#333] text-xs font-mono ml-2 hidden sm:block">
               ibrahimkashif792@gmail.com
             </span>
           </motion.div>
@@ -181,8 +169,8 @@ const HeroSection = () => {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 8, 0] }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+        animate={{ y: [0, 6, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
         <a
@@ -191,10 +179,10 @@ const HeroSection = () => {
             e.preventDefault();
             document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="flex flex-col items-center gap-1 text-[#475569] hover:text-[#38BDF8] transition-colors"
+          className="flex flex-col items-center gap-1 text-[#333] hover:text-[#B5FF4D] transition-colors"
         >
-          <span className="text-[10px] font-mono tracking-widest uppercase">Scroll</span>
-          <i className="fas fa-chevron-down text-sm"></i>
+          <span className="text-[9px] font-mono tracking-[0.3em] uppercase">Scroll</span>
+          <i className="fas fa-chevron-down text-xs"></i>
         </a>
       </motion.div>
     </section>

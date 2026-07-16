@@ -40,10 +40,10 @@ export const education: Education[] = [
   },
   {
     institution: "Jawan Pakistan",
-    degree: "MERN Stack Development",
+    degree: "Full-Stack Development",
     period: "2022 – 2023",
     description:
-      "Intensive government-backed training program focused on the MERN stack. Developed multiple full-stack projects and collaborated in team environments, laying the foundation for a professional development career.",
+      "Intensive government-backed training program focused on full-stack web development. Developed multiple production-ready projects and collaborated in team environments, laying the foundation for a professional engineering career.",
     highlightsTitle: "Skills Acquired",
     highlights: ["React.js", "Node.js", "MongoDB", "Express.js", "RESTful APIs"],
     icon: "fas fa-laptop-code",
@@ -53,7 +53,7 @@ export const education: Education[] = [
 
 export const certifications: Certification[] = [
   {
-    title: "MERN Stack Development",
+    title: "Full-Stack Development",
     issuer: "Jawan Pakistan",
     color: "primary",
   },

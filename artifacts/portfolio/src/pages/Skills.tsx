@@ -12,8 +12,8 @@ const Skills = () => {
       variants={pageVariants}
     >
       <Helmet>
-        <title>Skills - Muhammad Ibrahim | MERN Stack Developer</title>
-        <meta name="description" content="Explore the technical skills of Muhammad Ibrahim, including React.js, Next.js, Node.js, Express.js, MongoDB, and more." />
+        <title>Skills - Muhammad Ibrahim | Full-Stack Developer</title>
+        <meta name="description" content="Explore the technical skills of Muhammad Ibrahim, including React.js, Next.js, Node.js, Express.js, and more full-stack technologies." />
       </Helmet>
       
       <main className="pt-20">

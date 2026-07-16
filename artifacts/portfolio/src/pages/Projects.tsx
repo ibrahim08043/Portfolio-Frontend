@@ -15,8 +15,8 @@ const Projects = () => {
       variants={pageVariants}
     >
       <Helmet>
-        <title>Projects - Muhammad Ibrahim | MERN Stack Developer</title>
-        <meta name="description" content="Browse Muhammad Ibrahim's portfolio of web development projects built with React.js, Next.js, and the MERN stack." />
+        <title>Projects - Muhammad Ibrahim | Full-Stack Developer</title>
+        <meta name="description" content="Browse Muhammad Ibrahim's portfolio of web development projects built with React.js, Next.js, Node.js, and TypeScript." />
       </Helmet>
       
       <main className="py-20 pt-32">

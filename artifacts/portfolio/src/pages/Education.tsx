@@ -12,7 +12,7 @@ const Education = () => {
       variants={pageVariants}
     >
       <Helmet>
-        <title>Education - Muhammad Ibrahim | MERN Stack Developer</title>
+        <title>Education - Muhammad Ibrahim | Full-Stack Developer</title>
         <meta name="description" content="Discover Muhammad Ibrahim's educational background, including academic achievements and professional certifications in web development." />
       </Helmet>
       
