@@ -117,6 +117,13 @@ export default {
         "slide-in":       "slide-in 0.3s ease-out",
         "pulse-slow":     "pulse-slow 3s ease-in-out infinite",
         "pulse-ring":     "pulse-slow 2s ease-in-out infinite",
+        // Background animation orbs
+        "orb-1":          "orb-1 38s ease-in-out infinite",
+        "orb-2":          "orb-2 45s ease-in-out infinite",
+        "orb-3":          "orb-3 29s ease-in-out infinite",
+        "orb-4":          "orb-4 52s ease-in-out infinite",
+        "orb-5":          "orb-5 23s ease-in-out infinite",
+        "scan-line":      "scan-line 12s linear infinite",
       },
     },
   },

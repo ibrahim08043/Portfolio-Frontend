@@ -11,6 +11,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Preloader from "@/components/layout/Preloader";
 import CustomCursor from "@/components/layout/CustomCursor";
+import BackgroundAnimation from "@/components/layout/BackgroundAnimation";
 import ChatWidget from "@/components/chat/ChatWidget";
 
 // Pages
@@ -63,6 +64,7 @@ function App() {
             <Preloader />
           ) : (
             <>
+              <BackgroundAnimation />
               <CustomCursor />
               <Navbar />
               <Router />

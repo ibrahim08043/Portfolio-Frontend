@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Background Animation Keyframes ─────────────────────────────────────── */
+
+@keyframes orb-1 {
+  0%,  100% { transform: translate(0,    0)    scale(1);    }
+  20%        { transform: translate(3vw,  2vh)  scale(1.07); }
+  40%        { transform: translate(5vw,  7vh)  scale(0.95); }
+  65%        { transform: translate(-2vw, 9vh)  scale(1.04); }
+  80%        { transform: translate(-4vw, 4vh)  scale(0.98); }
+}
+
+@keyframes orb-2 {
+  0%,  100% { transform: translate(0,    0)    scale(1);    }
+  25%        { transform: translate(-5vw, -6vh) scale(1.1);  }
+  50%        { transform: translate(-2vw, -10vh) scale(0.92); }
+  75%        { transform: translate(4vw,  -5vh) scale(1.05); }
+}
+
+@keyframes orb-3 {
+  0%,  100% { transform: translate(0,    0)    scale(1);    }
+  33%        { transform: translate(-6vw, 5vh)  scale(1.12); }
+  66%        { transform: translate(2vw,  -4vh) scale(0.88); }
+}
+
+@keyframes orb-4 {
+  0%,  100% { transform: translate(0,    0)    scale(1);    }
+  50%        { transform: translate(5vw,  -7vh) scale(1.18); }
+}
+
+@keyframes orb-5 {
+  0%,  100% { transform: translate(0,    0)    scale(1);    }
+  40%        { transform: translate(3vw,  4vh)  scale(1.1);  }
+  80%        { transform: translate(-2vw, 2vh)  scale(0.9);  }
+}
+
+@keyframes scan-line {
+  0%   { transform: translateY(0);     opacity: 0; }
+  4%   { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
 /* ─── Axiom Design Tokens ─────────────────────────────────────────────────── */
 :root {
   /* shadcn / Radix tokens mapped to Axiom palette */
