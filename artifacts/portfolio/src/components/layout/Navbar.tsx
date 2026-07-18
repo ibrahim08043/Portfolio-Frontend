@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Download, Menu, X } from "lucide-react";
-import Cv from "../../../../attached_assets/Muhammad_Ibrahim_Full_Stack_Developer_Resume_1784188974780.pdf";
+import Cv from "../../../../../attached_assets/Muhammad_Ibrahim_Full_Stack_Developer_Resume.pdf";
 
 const navLinks = [
   { path: "/",           label: "Home" },

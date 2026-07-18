@@ -1,9 +1,9 @@
-import iptvImg      from "../../../attached_assets/iptv.png";
-import realstateImg  from "../../../attached_assets/realstate.png";
-import zwaImg        from "../../../attached_assets/zwa.png";
-import hrCrmImg      from "../../../attached_assets/hrCrmImg4.png";
-import ytVideoTrimmerImg from "../../../attached_assets/youtube.png";
-import iimiinImg     from "../../../attached_assets/iimiinImg.png";
+import iptvImg      from "../../../../attached_assets/iptv.png";
+import realstateImg  from "../../../../attached_assets/realstate.png";
+import zwaImg        from "../../../../attached_assets/zwa.png";
+import hrCrmImg      from "../../../../attached_assets/hrCrmImg4.png";
+import ytVideoTrimmerImg from "../../../../attached_assets/youtube.png";
+import iimiinImg     from "../../../../attached_assets/iimiinImg.png";
 
 export interface Project {
   id: number;
