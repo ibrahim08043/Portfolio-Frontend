@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import { ChatMessage, ChatState } from "@/lib/types";
+import Logo from "../../../attached_assets/logo.png";
 
 const ChatWidget = () => {
   const [state, setState] = useState<ChatState>({
@@ -146,9 +147,11 @@ const ChatWidget = () => {
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-[#2C2C2C]">
               <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded bg-[#B5FF4D]/15 flex items-center justify-center">
-                  <span className="font-mono text-[10px] font-bold text-[#B5FF4D]">MI</span>
-                </div>
+                <img
+                  src={Logo}
+                  alt="Muhammad Ibrahim Logo"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div>
                   <p className="text-sm font-display font-bold text-white leading-none">Muhammad Ibrahim</p>
                   <p className="text-[10px] font-mono text-[#B5FF4D] mt-0.5 flex items-center gap-1">
@@ -187,11 +190,10 @@ const ChatWidget = () => {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[80%] px-3 py-2 rounded text-sm leading-relaxed ${
-                      msg.role === "user"
+                    className={`max-w-[80%] px-3 py-2 rounded text-sm leading-relaxed ${msg.role === "user"
                         ? "bg-[#B5FF4D] text-[#090909] font-medium"
                         : "bg-[#1A1A1A] text-[#EFEFEF] border border-[#2C2C2C]"
-                    }`}
+                      }`}
                   >
                     {msg.content}
                   </div>
@@ -245,11 +247,10 @@ const ChatWidget = () => {
               <button
                 type="submit"
                 disabled={!input.trim() || state.isLoading}
-                className={`w-9 h-9 rounded flex items-center justify-center transition-all duration-200 ${
-                  input.trim() && !state.isLoading
+                className={`w-9 h-9 rounded flex items-center justify-center transition-all duration-200 ${input.trim() && !state.isLoading
                     ? "bg-[#B5FF4D] text-[#090909] hover:bg-[#CAFF6B]"
                     : "bg-[#1A1A1A] border border-[#2C2C2C] text-[#444] cursor-not-allowed"
-                }`}
+                  }`}
                 aria-label="Send"
               >
                 {state.isLoading ? (

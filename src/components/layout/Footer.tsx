@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
+import Logo from "../../../attached_assets/logo.png";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   const social = [
-    { icon: "fab fa-github",   href: "https://github.com/ibrahim08043",                     label: "GitHub"    },
-    { icon: "fab fa-linkedin", href: "https://linkedin.com/in/muhammadibrahim-7b3220367",   label: "LinkedIn"  },
-    { icon: "fab fa-twitter",  href: "https://x.com/Ibrahim93045",                         label: "Twitter/X" },
+    { icon: "fab fa-github", href: "https://github.com/ibrahim08043", label: "GitHub" },
+    { icon: "fab fa-linkedin", href: "https://linkedin.com/in/muhammadibrahim-7b3220367", label: "LinkedIn" },
+    { icon: "fab fa-twitter", href: "https://x.com/Ibrahim93045", label: "Twitter/X" },
   ];
 
   return (
@@ -16,9 +17,11 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="flex items-center gap-2.5">
-            <span className="font-mono text-[11px] font-bold text-[#B5FF4D] bg-[#B5FF4D]/10 border border-[#B5FF4D]/25 px-2 py-1 rounded">
-              MI
-            </span>
+            <img
+              src={Logo}
+              alt="Muhammad Ibrahim Logo"
+              className="w-10 h-10 rounded-full object-cover"
+            />
             <span className="text-sm text-[#555] font-mono">
               © {year} Muhammad Ibrahim
             </span>
